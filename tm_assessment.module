@@ -58,7 +58,7 @@ function tm_assessment_form($form, &$form_state, $quiz_name) {
 	$node = menu_get_object('node', 1, $path);
 	$wrapper = entity_metadata_wrapper('node', $node);
 	$question_text = $wrapper->field_question_collection[0]->field_question_text->value();
-	dsm($node);
+	//dsm($node);
 	
 	$form['assessment_form'] = array(
 		'#type' => 'horizontal_tabs',
@@ -83,6 +83,18 @@ function tm_assessment_form($form, &$form_state, $quiz_name) {
 	$form['question_formset']['question'] = array(
 		'#type' => 'textfield',
 		'#title' => $question_text,
+		'#group' => 'assessment_form',
+	);
+	$form['results_formset'] = array(
+		'#type' => 'fieldset',
+		'#title' => t('Assessment Results'),
+		'#colapsible' => TRUE,
+		'#group' => 'assessment_form',
+	);
+	$form['results_formset']['results'] = array(
+		'#type' => 'markup',
+		'#markup' => '<h3>Your Results</h3>',
+		'#title' => t('Results'),
 		'#group' => 'assessment_form',
 	);
 	$form['#submit'][] = 'tm_assessment_form_submit';
