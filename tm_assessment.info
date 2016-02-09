@@ -1,0 +1,5 @@
+name = TM Assessment
+description = Generate user assessment "quiz" for generating leads on your website.
+package = Custom
+core = 7.x
+files[] = tm_assessment.module
