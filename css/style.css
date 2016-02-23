@@ -1,0 +1,109 @@
+/* =========== */
+/* = General = */
+/* =========== */
+
+body {
+  color: #444444;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: 50%;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.hidden {
+	display: none;
+}
+
+.sliderdemoBasicUsage input[type="number"] {
+  text-align: center;
+  padding-left: 10px; 
+}
+
+input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]), input[type="time"]:focus:not([readonly]), input[type="date"]:focus:not([readonly]), input[type="datetime-local"]:focus:not([readonly]), input[type="tel"]:focus:not([readonly]), input[type="number"]:focus:not([readonly]), input[type="search"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #C4D32D;
+  box-shadow: 0 1px 0 0 #C4D32D;
+}
+
+/* ============== */
+/* = Main Title = */
+/* ============== */
+
+.main-title {
+  color: #FFFFFF;
+  background: #168ABC;
+  text-align: center;
+}
+
+.main-title h1 {
+  padding: 10px 0;
+}
+
+/* ================= */
+/* = Pager Section = */
+/* ================= */
+
+.pager {
+  background: #18a0db;
+}
+
+.pager span {
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+  color: #FFFFFF;
+  margin: 0 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pager span.active {
+  color: #C4D32D;
+  border-bottom: 4px solid #C4D32D;
+}
+
+.pager .inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ============= */
+/* = Form Area = */
+/* ============= */
+
+.section {
+  padding: 0 30px;
+}
+
+.section-title {
+  margin: 20px 0;
+}
+
+.section .form-field input {
+  color: #168ABC;
+  font-size: 1.8rem;
+}
+
+/* =========== */
+/* = Buttons = */
+/* =========== */
+
+.waves-effect.waves-light.btn-large {
+  background: #168ABC;
+}
+
+.waves-effect.waves-light.btn-large:hover {
+  background: #18a0db;
+}

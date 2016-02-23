@@ -43,82 +43,65 @@ $status_code = @curl_getinfo($ch, CURLINFO_HTTP_CODE); //Log the response status
 echo $status_code . " " . $response;
 ?>
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TM Assessment</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/nouislider.tooltips.css">
+    <link rel="stylesheet" href="css/nouislider.pips.css">
+    <link rel="stylesheet" href="css/nouislider.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
 
-<div id="assessment-wrapper">
-  <div class="assessment-inner">
-      
-    <div class="assessment-title"><h1>Assessment</h1></div>
-      
-			<div id="section-three" class="section">
-        <div class="section-inner">
-          <div class="section-title"><h2>Section Three</h2></div>
-          <form name="results" action="" method="post">
-            <div class="form-field"><span class="label">First Name:</span> <input class="first-name" type="text" name="first_name" value=<?php echo '"' . $first_name . '"'; ?>></div>
-            <div class="form-field"><span class="label">Last Name:</span> <input class="last-name" type="text" name="last_name" value=<?php echo '"' . $last_name . '"'; ?>></div>
-            <div class="form-field"><span class="label">Company:</span> <input class="company" type="text" name="company" value=<?php echo '"' . $company . '"'; ?>></div>
-            <div class="form-field"><span class="label">Company URL:</span> <input class="company" type="text" name="company_url" value=<?php echo '"' . $company_url . '"'; ?>></div>
-            <div class="form-field"><span class="label">Total Annual Marketing &amp; Advertising Budget: </span><select name="persona">
-              <option value="#">Volvo</option>
-              <option value="#">Saab</option>
-              <option value="#">Fiat</option>
-              <option value="#">Audi</option>
-            </select></div>
-         <div class="form-field"><span class="label">Total Annual Marketing &amp; Advertising Budget: </span>
-					 <select name="budget">
-           <option value="less_than_15">Less than $15,000 annually</option>
-           <option value="15_to_30">$15,000 to $30,000 annually</option>
-           <option value="30_to_50">$30,000 to $50,000 annually</option>
-           <option value="50_to_100">$50,000 to $1000,000 annually</option>
-           <option value="greater_than_100">Greater than $100,000 annually</option>
-         </select></div>
-         <button class="button" type="submit">Submit</button>
-       </form>
-     </div>
-   </div><!-- #section-three .section -->
-   
-   
-  </div><!-- .assessment-inner -->
-</div><!-- #assessment-wrapper -->
+    <div id="assessment-wrapper">
+      <div class="assessment-inner">
+            
+        <div class="main-title"><h1>Assessment</h1></div>
+        
+        <div class="pager">
+          <div class="inner">
+            <span class="one">1</span><span class="two">2</span><span class="three active">3</span>
+          </div>
+        </div>
+              
+        <div id="section-three" class="section">
+          <div class="section-inner">
+            <div class="section-title"><h2>Section Three</h2></div>
+            <form name="results" action="" method="post">
+              <div class="form-field"><span class="label">First Name:</span> <input class="first-name" type="text" name="first_name" value=<?php echo '"' . $first_name . '"'; ?>></div>
+              <div class="form-field"><span class="label">Last Name:</span> <input class="last-name" type="text" name="last_name" value=<?php echo '"' . $last_name . '"'; ?>></div>
+              <div class="form-field"><span class="label">Company:</span> <input class="company" type="text" name="company" value=<?php echo '"' . $company . '"'; ?>></div>
+              <div class="form-field"><span class="label">Company URL:</span> <input class="company" type="text" name="company_url" value=<?php echo '"' . $company_url . '"'; ?>></div>
+              <div class="form-field"><span class="label">Total Annual Marketing &amp; Advertising Budget: </span><select name="persona">
+                <option value="#">Volvo</option>
+                <option value="#">Saab</option>
+                <option value="#">Fiat</option>
+                <option value="#">Audi</option>
+              </select></div>
+               <div class="form-field"><span class="label">Total Annual Marketing &amp; Advertising Budget: </span>
+              <select name="budget">
+                <option value="less_than_15">Less than $15,000 annually</option>
+                <option value="15_to_30">$15,000 to $30,000 annually</option>
+                <option value="30_to_50">$30,000 to $50,000 annually</option>
+                <option value="50_to_100">$50,000 to $1000,000 annually</option>
+                <option value="greater_than_100">Greater than $100,000 annually</option>
+              </select></div>
+              <button class="waves-effect waves-light btn-large" type="submit">Submit</button>
+            </form>
+          </div>
+        </div><!-- #section-three .section -->
+         
+      </div><!-- .assessment-inner -->
+    </div><!-- #assessment-wrapper -->
 
-<style>
-
-.hidden {
-	display: none;
-}
-
-.assessment-inner {
-   width: 500px;
-   padding: 15px;
-   display: inline-block;
-   background: #ccc;
-}   
-
-.assessment-title h1 {
-   margin-top: 0;
-}
-
-.section {
-   clear: both;
-}
-
-.section input,
-.section select,   
-.section .label {
-   width: 50%;
-   float: left;
-   margin-bottom: 10px;
-   display: block;
-}
-
-.section .form-field {
-   width: 100%;
-   float: left;
-}
-
-button {
-   float: right;
-   clear: both;
-	 width: 50%;
-}
-
-</style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+    <script type="text/javascript" src="js/nouislider.js"></script>
+    <script type="text/javascript" src="js/slidercontroller.js"></script>
+  </body>
+</html> 
