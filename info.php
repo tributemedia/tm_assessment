@@ -24,10 +24,11 @@
           <div class="section-inner">
             <div class="section-title"><h2>Let's Get Started</h2></div>
             <form action="questions.php" method="post" name="info">
-              <div class="form-field"><span class="label">First Name:</span> <input type="text" name="first_name"></div>
-              <div class="form-field"><span class="label">Last Name:</span> <input type="text" name="last_name"></div>
-              <div class="form-field"><span class="label">Company:</span> <input type="text" name="company"></div>
-              <div class="form-field"><span class="label">Company URL:</span> <input type="text" name="company_url"></div>
+              <div class="form-field"><span class="label">First Name:</span> <input type="text" name="first_name" required /></div>
+              <div class="form-field"><span class="label">Last Name:</span> <input type="text" name="last_name" required /></div>
+							<div class="form-field"><span class="label">Email:</span> <input type="email" name="email" required /></div>
+              <div class="form-field"><span class="label">Company:</span> <input type="text" name="company" required /></div>
+              <div class="form-field"><span class="label">Company URL:</span> <input type="text" name="company_url" required /></div>
               <div class="button-wrapper">
  		  				  <button class="waves-effect waves-light btn-large" type="submit">Next</button>
               </div>
