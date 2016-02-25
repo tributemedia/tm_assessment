@@ -12,9 +12,7 @@ $company_url = $_POST['company_url'];
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/nouislider.tooltips.css">
-    <link rel="stylesheet" href="css/nouislider.pips.css">
-    <link rel="stylesheet" href="css/nouislider.css">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -39,32 +37,38 @@ $company_url = $_POST['company_url'];
 	              <div class="form-field"><input class="company" type="hidden" name="company" value=<?php echo '"' . $company . '"'; ?>></div>
 	              <div class="form-field"><input class="company" type="hidden" name="company_url" value=<?php echo '"' . $company_url . '"'; ?>></div>
                 
-	 		  				<div id="q1"><span class="label">Question 1:</span><input type="text" name="q1"></div>
-                
-                <div id="slider-update" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  <div class="noUi-base">
-                    <div class="noUi-origin" style="left: 0%;">
-                      <div class="noUi-handle noUi-handle-lower"></div>
-                    </div>
+								<div data-role="main" class="ui-content">
+                  
+                  <div class="assessment-question">
+								    <label for="q1">Question 1:</label>
+									  <p>How do you like our new assessment?</p>
+                    <p><small>0 is not cool, and 5 is most cool</small></p>
+								    <input type="range" name="q1" id="q1" value="0" min="0" max="5" data-highlight="true" data-show-value="true" />
+                    <div class="numbers"><span class="zero">0</span><span class="one">1</span><span class="two">2</span><span class="three">3</span><span class="four">4</span><span class="five">5</span></div>
                   </div>
-                </div>
-                <span id="slider-update-value" class="example-val">0.00</span>
-                
-                <div class="button-wrapper">
-	 		  				  <button class="waves-effect waves-light btn-large" type="submit">Next</button>
-                </div>
-	 		  			</form>
-           </div>
+									
+                  <div class="assessment-question">
+									  <label for="q2">Question 2:</label>
+									  <p>How do you like our old assessment?</p>
+                    <p><small>0 is not cool, and 5 is most cool</small></p>
+									  <input type="range" name="q2" id="q2" value="0" min="0" max="5" data-highlight="true" data-show-value="true" />
+                    <div class="numbers"><span class="zero">0</span><span class="one">1</span><span class="two">2</span><span class="three">3</span><span class="four">4</span><span class="five">5</span></div>
+                  </div>
+                  
+								</div>
+              
+              <div class="button-wrapper">
+	 		  			  <button class="waves-effect waves-light btn-large" type="submit">Next</button>
+              </div>
+	 		  		</form>
+          </div>
         </div><!-- #section-two .section -->
-      
       </div>
     </div>
     
+		<!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+		<!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    
-    <script type="text/javascript" src="js/nouislider.js"></script>
-    <script type="text/javascript" src="js/slidercontroller.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>		
   </body>
-</html> 
-
+</html>

@@ -5,9 +5,6 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/nouislider.tooltips.css">
-    <link rel="stylesheet" href="css/nouislider.pips.css">
-    <link rel="stylesheet" href="css/nouislider.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -42,8 +39,5 @@
   
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    
-    <script type="text/javascript" src="js/nouislider.js"></script>
-    <script type="text/javascript" src="js/slidercontroller.js"></script>
   </body>
 </html> 

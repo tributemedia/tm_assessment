@@ -100,10 +100,74 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
 /* = Buttons = */
 /* =========== */
 
+.button-wrapper {
+  margin-top: 15px;
+}
+
 .waves-effect.waves-light.btn-large {
+  color: #ffffff;
   background: #168ABC;
+  font-weight: 400;
+  width: auto;
+  text-shadow: none;
 }
 
 .waves-effect.waves-light.btn-large:hover {
   background: #18a0db;
+}
+
+/* ============= */
+/* = Questions = */
+/* ============= */
+
+.assessment-question input {
+  margin-bottom: 0;
+}
+
+.assessment-question {
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.assessment-question .numbers {
+  width: 99%;
+  float: none;
+  margin: auto;
+}
+
+.assessment-question .numbers span {
+  float: left;
+}
+
+.assessment-question .numbers span.zero {
+  width: 10%;
+  text-align: left;
+}
+
+.assessment-question .numbers span.one {
+  width: 20%;
+  text-align: center;
+}
+
+.assessment-question .numbers span.two {
+  width: 20%;
+  text-align: center;
+}
+
+.assessment-question .numbers span.three {
+  width: 20%;
+  text-align: center;
+}
+
+.assessment-question .numbers span.four {
+  width: 20%;
+  text-align: center;
+}
+
+.assessment-question .numbers span.five {
+  width: 10%;
+  text-align: right;
 }

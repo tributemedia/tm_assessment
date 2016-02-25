@@ -50,9 +50,7 @@ echo $status_code . " " . $response;
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/nouislider.tooltips.css">
-    <link rel="stylesheet" href="css/nouislider.pips.css">
-    <link rel="stylesheet" href="css/nouislider.css">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -90,7 +88,9 @@ echo $status_code . " " . $response;
                 <option value="50_to_100">$50,000 to $1000,000 annually</option>
                 <option value="greater_than_100">Greater than $100,000 annually</option>
               </select></div>
-              <button class="waves-effect waves-light btn-large" type="submit">Submit</button>
+              <div class="button-wrapper">
+ 		  				  <button class="waves-effect waves-light btn-large" type="submit">Submit</button>
+              </div>
             </form>
           </div>
         </div><!-- #section-three .section -->
@@ -100,8 +100,5 @@ echo $status_code . " " . $response;
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    
-    <script type="text/javascript" src="js/nouislider.js"></script>
-    <script type="text/javascript" src="js/slidercontroller.js"></script>
   </body>
 </html> 
