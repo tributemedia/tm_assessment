@@ -11,6 +11,8 @@ foreach ($score as $key => $value) {
 }
 
 $percent = ($total * 100)/$possible;
+$percent = round($percent, 0, PHP_ROUND_HALF_UP);
+
 $results = '<h2>Here is your score: ' . $percent . '%</h2>';
 
 switch ($percent) {

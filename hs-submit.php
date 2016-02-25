@@ -7,7 +7,7 @@ $hs_context      = array(
     'hutk' => $hubspotutk,
     'ipAddress' => $ip_addr,
     'pageUrl' => 'http://assessment.tributemedia.com/questions.php',
-    'pageName' => 'Assessment-Questions'
+    'pageName' => $page_name
 );
 $hs_context_json = json_encode($hs_context);
 
@@ -17,7 +17,9 @@ $str_post = "firstname=" . urlencode($first_name)
     . "&email=" . urlencode($email)
 		. "&company=" . urlencode($company)
 		. "&website=" . urlencode($company_url)
-		. "&completed_step_2=" . urlencode('yes')
+		. "&completed_step_1=" . urlencode($step1)
+		. "&completed_step_2=" . urlencode($step2)
+		. "&finished=" . urlencode($finished)
 		. "&mark_for_deletion=" . urlencode('yes') //remove this before production
     . "&hs_context=" . urlencode($hs_context_json); //Leave this one be
 

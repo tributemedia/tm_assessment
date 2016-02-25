@@ -1,5 +1,10 @@
 <?php
 
+$step1 = 'yes';
+$step2 = 'no';
+$finished = 'no';
+$page_name = 'Assessment-Information';
+
 include 'post-vars.php';
 //include 'hs-submit.php';
 

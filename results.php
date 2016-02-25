@@ -1,5 +1,10 @@
 <?php
 
+$step1 = 'yes';
+$step2 = 'yes';
+$finished = 'no';
+$page_name = 'Assessment-Questions';
+
 include 'post-vars.php';
 include 'results-vars.php';
 include 'calc.php';
