@@ -6,6 +6,7 @@ $finished = 'no';
 $page_name = 'Assessment-Information';
 
 include 'post-vars.php';
+include 'questions-vars.php';
 //include 'hs-submit.php';
 
 ?>
@@ -15,10 +16,11 @@ include 'post-vars.php';
   <head>
     <title>TM Assessment</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     
@@ -57,30 +59,24 @@ include 'post-vars.php';
 								</div>
                 
 								<div data-role="main" class="ui-content">
-                  
-                  <div class="assessment-question">
-										<input type="hidden" name="q1-weight" value="2">
-								    <label for="q1">Question 1:</label>
-									  <p>How do you like our new assessment?</p>
-                    <p><small>0 is not cool, and 5 is most cool</small></p>
-								    <input type="range" name="q1" id="q1" value="1" min="1" max="5" />
-                    <div class="numbers">
-											<span class="one">1</span><span class="two">2</span><span class="three">3</span>
-											<span class="four">4</span><span class="five">5</span>
-										</div>
-                  </div>
 									
-                  <div class="assessment-question">
-										<input type="hidden" name="q2-weight" value="1">
-									  <label for="q2">Question 2:</label>
-									  <p>How do you like our old assessment?</p>
-                    <p><small>0 is not cool, and 5 is most cool</small></p>
-									  <input type="range" name="q2" id="q2" value="1" min="1" max="5" />
-                    <div class="numbers">
-											<span class="one">1</span><span class="two">2</span><span class="three">3</span>
-											<span class="four">4</span><span class="five">5</span>
-										</div>
-                  </div>
+                  <?php
+									foreach ($questions as $key => $question) {
+										$html = '<div class="assessment-question">';
+										$html .= '<input type="hidden" name="q' . $key 
+											. '-weight" value="' . $question['m'] . '>"';
+										$html .= '<label for="q' . $key . '">Question ' . $key . ':</label>';
+										$html .= '<p>' . $question['q'] . '<span class="tool-tip"><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="' . $question['t'] . '"><i class="tiny material-icons">info</i></a></span></p>';
+										$html .= '<input type="range" name="q' . $key . '" id="q' . $key . '" value="1" min="1" max="5" />';
+										$html .= '<div class="numbers">';
+										$html .= '<span class="one"><img src="css/images/1.png" /></span>
+                      <span class="two"><img src="css/images/2.png" /></span><span class="three"><img src="css/images/3.png" /></span>
+											<span class="four"><img src="css/images/4.png" /></span><span class="five"><img src="css/images/5.png" /></span>';
+										$html .= '</div></div>';
+										
+										print $html;
+									}
+									?>
                   
 								</div>
               
@@ -89,7 +85,14 @@ include 'post-vars.php';
               </div>
 	 		  		</form>
           </div>
-        </div><!-- #section-two .section -->
+        </div>
+        
+        <div id="footer">
+          <div class="inner">
+            <p>Vero iudico mei ei, vix oratio facilisi lobortis te.</p>
+          </div>
+        </div>
+        
       </div>
     </div>
     

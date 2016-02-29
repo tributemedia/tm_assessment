@@ -2,8 +2,13 @@
 /* = General = */
 /* =========== */
 
+html {
+  background: #333333;
+}
+
 body {
   color: #444444;
+  background: #ffffff;
   font-weight: 400;
 }
 
@@ -13,12 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 200;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 300;
 }
 
@@ -32,8 +37,21 @@ h2 {
 }
 
 input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]), input[type="time"]:focus:not([readonly]), input[type="date"]:focus:not([readonly]), input[type="datetime-local"]:focus:not([readonly]), input[type="tel"]:focus:not([readonly]), input[type="number"]:focus:not([readonly]), input[type="search"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #C4D32D;
-  box-shadow: 0 1px 0 0 #C4D32D;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0 1px 0 0 #000000;
+}
+
+body,
+.column,
+.section {
+  width: 100%;
+  float: left;
+}
+
+.row .col,
+.section h2,
+.column .inner {
+  padding: 0;
 }
 
 /* ============== */
@@ -41,8 +59,8 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
 /* ============== */
 
 .main-title {
-  color: #FFFFFF;
-  background: #168ABC;
+  color: #444444;
+  background: #ffffff;
   text-align: center;
 }
 
@@ -55,13 +73,13 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
 /* ================= */
 
 .pager {
-  background: #18a0db;
+  background: #ffffff;
 }
 
 .pager span {
   border-bottom: 4px solid transparent;
   border-top: 4px solid transparent;
-  color: #FFFFFF;
+  color: #888888;
   margin: 0 10px;
   padding: 5px 10px;
   font-size: 18px;
@@ -69,8 +87,8 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
 }
 
 .pager span.active {
-  color: #C4D32D;
-  border-bottom: 4px solid #C4D32D;
+  color: #000000;
+  border-bottom: 4px solid #000000;
 }
 
 .pager .inner {
@@ -79,9 +97,9 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
   width: 100%;
 }
 
-/* ============= */
-/* = Form Area = */
-/* ============= */
+/* ====================== */
+/* = Info / Section One = */
+/* ====================== */
 
 .section {
   padding: 0 30px;
@@ -92,8 +110,12 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
 }
 
 .section .form-field input {
-  color: #168ABC;
+  color: #000000;
   font-size: 1.8rem;
+}
+
+#section-one .button-wrapper {
+  margin-top: 40px;
 }
 
 /* =========== */
@@ -106,19 +128,32 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
 
 .waves-effect.waves-light.btn-large {
   color: #ffffff;
-  background: #168ABC;
+  background: #000000;
   font-weight: 400;
   width: auto;
   text-shadow: none;
 }
 
 .waves-effect.waves-light.btn-large:hover {
-  background: #18a0db;
+  background: #444444;
 }
 
-/* ============= */
-/* = Questions = */
-/* ============= */
+/* ========================== */
+/* = Questions / Section Two= */
+/* ========================== */
+
+span.thumb.active {
+  display: none;
+}
+
+input[type="range"],
+input[type="range"]:hover,
+input[type="range"]:active,
+input[type="range"]:focus,
+input[type=range]::-moz-focus-outer {
+  border: 0 !important;  
+  outline: none !important;
+}
 
 .assessment-question input {
   margin-bottom: 0;
@@ -127,9 +162,8 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
 .assessment-question {
   width: 100%;
   float: left;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .assessment-question .numbers {
@@ -142,32 +176,108 @@ input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]
   float: left;
 }
 
-.assessment-question .numbers span.zero {
-  width: 10%;
-  text-align: left;
+.assessment-question .numbers span img {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .assessment-question .numbers span.one {
-  width: 20%;
-  text-align: center;
+  width: 12.5%;
+  text-align: left;
 }
 
 .assessment-question .numbers span.two {
-  width: 20%;
+  width: 25%;
   text-align: center;
 }
 
 .assessment-question .numbers span.three {
-  width: 20%;
+  width: 25%;
   text-align: center;
 }
 
 .assessment-question .numbers span.four {
-  width: 20%;
+  width: 25%;
   text-align: center;
 }
 
 .assessment-question .numbers span.five {
-  width: 10%;
+  width: 12.5%;
   text-align: right;
+}
+
+.tool-tip a i {
+  color: #000;
+  margin-left: 5px;
+}
+
+.tool-tip a i:hover {
+  cursor: pointer;
+}
+
+/* =========================== */
+/* = Results / Section Three = */
+/* =========================== */
+
+#section-three .input-field {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  float: left;
+}
+
+#section-three .input-field label {
+  left: 0;
+}
+
+#section-three .button-wrapper {
+  margin-top: 40px;
+}
+
+/* ========== */
+/* = Footer = */
+/* ========== */
+
+#footer {
+  color: #ffffff;
+  background: #333333;
+  height: 100px;
+  margin-top: 50px;
+  width: 100%;
+  float: left;
+}
+
+#footer .inner {
+  padding: 10px 30px;
+}
+
+/* ================= */
+/* = Media Queries = */
+/* ================= */
+
+/* = Design For 601px and above = */
+@media only screen and (min-width : 601px) {
+
+  .column {
+    width: 50%;
+  }
+  
+  .row .col,
+  .section h2,
+  .column .inner {
+    padding: 0 20px;
+  }
+  
+  #footer .inner {
+    padding: 10px 50px;
+  }
+  
+}
+
+
+/* = Design For 993px and above = */
+@media only screen and (min-width : 993px) {
+  
+
+
 }

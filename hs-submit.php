@@ -20,7 +20,11 @@ $str_post = "firstname=" . urlencode($first_name)
 		. "&completed_step_1=" . urlencode($step1)
 		. "&completed_step_2=" . urlencode($step2)
 		. "&finished=" . urlencode($finished)
-		. "&mark_for_deletion=" . urlencode('yes') //remove this before production
+		. "&hs_persona=" . urlencode($persona)
+		. "&marketing_budget=" . urlencode($budget)
+		. "&tuesday_tips_signup=" . urlencode($tuesday_tips)
+		. "&request_event_notifications=" . urlencode($events)
+		. "&request_call=" . urlencode($call)
     . "&hs_context=" . urlencode($hs_context_json); //Leave this one be
 
 //replace the values in this URL with your portal ID and your form GUID

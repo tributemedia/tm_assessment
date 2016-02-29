@@ -1,8 +1,8 @@
 <?php
 
-// =========================
-// = results.php variables =
-// =========================
+// ========================================
+// = Initialize variables for results.php =
+// ========================================
 
 // Set scores and total possible. Uncomment the number of lines needed.
 // Add more lines as needed.
@@ -33,3 +33,14 @@ $q_weight['2'] = (int) $_POST['q2-weight'];
 // $q_weight['8'] = (int) $_POST['q8-weight'];
 // $q_weight['9'] = (int) $_POST['q9-weight'];
 // $q_weight['10'] = (int) $_POST['q10-weight'];
+
+// Set Persona options.
+// Match array key to persona key on Hubspot.
+
+$personas['persona_2'] = 'Small to Medium sized business owner who is tired of doing it all myself and ready for some help to really grow.';
+$personas['persona_3'] = 'Marketing professional mostly interested in learning how to improve my skills.';
+$personas['persona_4'] = 'Owner or leader of an organization who knows that getting great help is what it takes to succeed.';
+$personas['persona_5'] = 'I am a unique business professional and don\'t really fit with the other options.';
+$personas['persona_9'] = 'I am an agency offering marketing or development services to my clients.';
+
+?>
