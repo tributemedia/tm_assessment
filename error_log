@@ -4,3 +4,8 @@
 [29-Feb-2016 15:08:04 America/Chicago] PHP Parse error:  syntax error, unexpected ''" value="1" min="1" max="5" /' (T_CONSTANT_ENCAPSED_STRING) in /home/asstm/public_html/tm_assessment/questions.php on line 68
 [29-Feb-2016 15:09:08 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/asstm/public_html/tm_assessment/questions.php on line 61
 [29-Feb-2016 15:09:43 America/Chicago] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/asstm/public_html/tm_assessment/questions-vars.php on line 9
+[02-Mar-2016 14:57:49 America/Chicago] PHP Warning:  include(tm_assessment/info.php): failed to open stream: No such file or directory in /home/asstm/public_html/tm_assessment/index.php on line 2
+[02-Mar-2016 14:57:49 America/Chicago] PHP Warning:  include(tm_assessment/info.php): failed to open stream: No such file or directory in /home/asstm/public_html/tm_assessment/index.php on line 2
+[02-Mar-2016 14:57:49 America/Chicago] PHP Warning:  include(): Failed opening 'tm_assessment/info.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/asstm/public_html/tm_assessment/index.php on line 2
+[03-Mar-2016 11:43:13 America/Chicago] PHP Parse error:  syntax error, unexpected '"\r\n"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/asstm/public_html/tm_assessment/questions-vars.php on line 17
+[03-Mar-2016 11:45:48 America/Chicago] PHP Parse error:  syntax error, unexpected '>' in /home/asstm/public_html/tm_assessment/questions-vars.php on line 17

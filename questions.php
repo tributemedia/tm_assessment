@@ -21,22 +21,38 @@ include 'questions-vars.php';
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script>
+		  function show(id) {
+        document.getElementById(id).className = "visible";
+		    //document.getElementById(id).style.display = "inline-flex";
+			 }
+		  function hide(id) {
+        document.getElementById(id).className = "hidden";
+		    //document.getElementById(id).style.display = "none";
+			}
+		</script>
   </head>
   <body>
     
     <div id="assessment-wrapper">
       <div class="assessment-inner">
           
-        <div class="main-title"><h1>Assessment</h1></div>
+        <div id="header">  
+          <div class="title-wrapper">
+            <div class="main-title"><h1>Assessment</h1></div>
+          </div>
           
-        <div class="pager">
-          <div class="inner">
-            <span class="one">1</span><span class="two active">2</span><span class="three">3</span>
+          <div class="pager-wrapper">
+            <div class="pager container">
+              <div class="inner">
+                <span class="one">1</span><span class="two active">2</span><span class="three">3</span>
+              </div>
+            </div>
           </div>
         </div>
 	 		  
         <div id="section-two" class="section">
-           <div class="section-inner">
+           <div class="section-inner container">
               <div class="section-title"><h2>Section Two</h2></div>
 	 		  			<form name="questions" action="results.php" method="post">
 	              <div class="form-field">
@@ -66,12 +82,17 @@ include 'questions-vars.php';
 										$html .= '<input type="hidden" name="q' . $key 
 											. '-weight" value="' . $question['m'] . '>"';
 										$html .= '<label for="q' . $key . '">Question ' . $key . ':</label>';
-										$html .= '<p>' . $question['q'] . '<span class="tool-tip"><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="' . $question['t'] . '"><i class="tiny material-icons">info</i></a></span></p>';
+										$html .= '<p>' . $question['q'] . '<span class="tool-tip"
+											onMouseOver="show(\'tip'.$key.'\')" onMouseOut="hide(\'tip'.$key.'\')">
+											<i class="tiny material-icons">info</i>';
+										$html .= '<span id="tip' . $key . '" class="hidden">' . $question['t'] . '</span></span></p>';
 										$html .= '<input type="range" name="q' . $key . '" id="q' . $key . '" value="1" min="1" max="5" />';
 										$html .= '<div class="numbers">';
 										$html .= '<span class="one"><img src="css/images/1.png" /></span>
-                      <span class="two"><img src="css/images/2.png" /></span><span class="three"><img src="css/images/3.png" /></span>
-											<span class="four"><img src="css/images/4.png" /></span><span class="five"><img src="css/images/5.png" /></span>';
+                      <span class="two"><img src="css/images/2.png" /></span>
+										<span class="three"><img src="css/images/3.png" /></span>
+											<span class="four"><img src="css/images/4.png" /></span>
+											<span class="five"><img src="css/images/5.png" /></span>';
 										$html .= '</div></div>';
 										
 										print $html;
@@ -88,8 +109,10 @@ include 'questions-vars.php';
         </div>
         
         <div id="footer">
-          <div class="inner">
-            <p>Vero iudico mei ei, vix oratio facilisi lobortis te.</p>
+          <div class="container">
+            <div class="inner">
+              <p>Vero iudico mei ei, vix oratio facilisi lobortis te.</p>
+            </div>
           </div>
         </div>
         

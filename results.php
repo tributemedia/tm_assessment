@@ -27,16 +27,22 @@ include 'calc.php';
     <div id="assessment-wrapper">
       <div class="assessment-inner">
             
-        <div class="main-title"><h1>Assessment</h1></div>
-        
-        <div class="pager">
-          <div class="inner">
-            <span class="one">1</span><span class="two">2</span><span class="three active">3</span>
+        <div id="header">  
+          <div class="title-wrapper">
+            <div class="main-title"><h1>Assessment</h1></div>
+          </div>
+          
+          <div class="pager-wrapper">
+            <div class="pager container">
+              <div class="inner">
+                <span class="one">1</span><span class="two">2</span><span class="three active">3</span>
+              </div>
+            </div>
           </div>
         </div>
         
         <div id="section-three" class="section">
-          <div class="section-inner">
+          <div class="section-inner container">
             <div class="section-title"><?php echo $results; ?></div>
             
             <div class="row">
@@ -121,8 +127,10 @@ include 'calc.php';
         </div>
         
         <div id="footer">
-          <div class="inner">
-            <p>Vero iudico mei ei, vix oratio facilisi lobortis te.</p>
+          <div class="container">
+            <div class="inner">
+              <p>Vero iudico mei ei, vix oratio facilisi lobortis te.</p>
+            </div>
           </div>
         </div>
          

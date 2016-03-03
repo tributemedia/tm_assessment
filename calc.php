@@ -13,24 +13,48 @@ foreach ($score as $key => $value) {
 $percent = ($total * 100)/$possible;
 $percent = round($percent, 0, PHP_ROUND_HALF_UP);
 
-$results = '<h2>Here is your score: ' . $percent . '%</h2>';
+$results = '<h2>You scored a ' . $percent . '%</h2>';
 
 switch ($percent) {
 	
-	case in_array($percent, range(0, 25)):
-	$results .= '<p>Here is the cool stuff you should do, based on your score 25.</p>';
+	case in_array($percent, range(1, 10)):
+	$results_body = '<p>Based on your score being in the range of 1 - 10, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
 	break;
 	
-	case in_array($percent, range(26, 50)):
-	$results .= '<p>Here is the cool stuff you should do, based on your score 50.</p>';
+	case in_array($percent, range(11, 20)):
+	$results_body = '<p>Based on your score being in the range of 11 - 20, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
 	break;
 	
-	case in_array($percent, range(51, 75)):
-	$results .= '<p>Here is the cool stuff you should do, based on your score 75.</p>';
+	case in_array($percent, range(21, 30)):
+	$results_body = '<p>Based on your score being in the range of 21 - 30, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
 	break;
 	
-	case in_array($percent, range(76, 100)):
-	$results .= '<p>Here is the cool stuff you should do, based on your score 100.</p>';
+	case in_array($percent, range(31, 40)):
+	$results_body = '<p>Based on your score being in the range of 31 - 40, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
+	break;
+  
+	case in_array($percent, range(41, 50)):
+	$results_body = '<p>Based on your score being in the range of 41 - 50, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
+	break;
+  
+	case in_array($percent, range(51, 60)):
+	$results_body = '<p>Based on your score being in the range of 51 - 60, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
+	break;
+  
+	case in_array($percent, range(61, 70)):
+	$results_body = '<p>Based on your score being in the range of 61 - 70, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
+	break;
+  
+	case in_array($percent, range(71, 80)):
+	$results_body = '<p>Based on your score being in the range of 71 - 80, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
+	break;
+  
+	case in_array($percent, range(81, 90)):
+	$results_body = '<p>Based on your score being in the range of 81 - 90, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
+	break;
+  
+	case in_array($percent, range(91, 100)):
+	$results_body = '<p>Based on your score being in the range of 91 - 100, this is your result. Lorem ipsum dolor sit amet, et libris principes mei. Pri lorem placerat no, sed accusam tincidunt vituperata ea. Copiosae tincidunt quo ut.</p>';
 	break;
 }
 ?>
