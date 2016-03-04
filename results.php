@@ -4,11 +4,12 @@ $step1 = 'yes';
 $step2 = 'yes';
 $finished = 'no';
 $page_name = 'Assessment-Questions';
+$page_url = 'http://assessment.tributemedia.com/questions.php';
 
 include 'post-vars.php';
 include 'results-vars.php';
 include 'calc.php';
-//include 'hs-submit.php';
+include 'hs-submit.php';
 
 ?>
 
@@ -16,10 +17,10 @@ include 'calc.php';
 <html>
   <head>
     <title>TM Assessment</title>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -104,7 +105,7 @@ include 'calc.php';
 						  			</div>
 										<p>
 											<input type="checkbox" id="call" name="call" />
-											<label for="call">Yes, I want to meet for an audit of my web marketing performance.</label>
+											<label for="call">Yes I want to meet for a more in-depth personalized audit of my web marketing.</label>
 										</p>
 										<p>
 											<input type="checkbox" id="tuesday-tips" name="tuesday-tips" />
@@ -127,9 +128,25 @@ include 'calc.php';
         </div>
         
         <div id="footer">
-          <div class="container">
-            <div class="inner">
-              <p>Vero iudico mei ei, vix oratio facilisi lobortis te.</p>
+          <div id="attribution-line" class="attribution-wrapper wrapper">
+            <div id="attribution-container" class="container">
+              <div class="inner row">
+                <div id="copyright-line" class="col s12 m6 center-on-mobile">
+                  <div class="inner">
+                    &copy; <?php echo date("Y"); ?> Tribute Media || 208.489.0123 <br /> 136 E. Idaho Ave. Ste. 100, Meridian, ID 83642
+                  </div>
+                </div>
+                <div id="powered-by" class="col s12 m6 right-align center-on-mobile">
+                  <div class="inner">
+                   <ul class="right-align center-on-mobile" id="social-links">
+                     <li><a class="twitter" href="https://twitter.com/tributemedia" target="_blank"><span class="inner">Twitter</span></a></li>
+                     <li><a class="facebook" href="https://www.facebook.com/tributemediaboise" target="_blank"><span class="inner">Facebook</span></a></li>
+                     <li><a class="linkedin" href="https://www.linkedin.com/company/tribute-media" target="_blank"><span class="inner">LinkedIn</span></a></li>
+                     <li><a class="contact" href="/contact"><span class="inner"><span class="inner">Contact</span></span></a></li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

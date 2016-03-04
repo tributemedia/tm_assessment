@@ -6,7 +6,7 @@ $ip_addr         = $_SERVER['REMOTE_ADDR']; //IP address too.
 $hs_context      = array(
     'hutk' => $hubspotutk,
     'ipAddress' => $ip_addr,
-    'pageUrl' => 'http://assessment.tributemedia.com/questions.php',
+    'pageUrl' => $page_url,
     'pageName' => $page_name
 );
 $hs_context_json = json_encode($hs_context);
