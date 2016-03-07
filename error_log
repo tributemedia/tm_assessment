@@ -9,3 +9,5 @@
 [02-Mar-2016 14:57:49 America/Chicago] PHP Warning:  include(): Failed opening 'tm_assessment/info.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/asstm/public_html/tm_assessment/index.php on line 2
 [03-Mar-2016 11:43:13 America/Chicago] PHP Parse error:  syntax error, unexpected '"\r\n"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/asstm/public_html/tm_assessment/questions-vars.php on line 17
 [03-Mar-2016 11:45:48 America/Chicago] PHP Parse error:  syntax error, unexpected '>' in /home/asstm/public_html/tm_assessment/questions-vars.php on line 17
+[05-Mar-2016 16:42:07 America/Chicago] PHP Parse error:  syntax error, unexpected 'assessment' (T_STRING) in /home/asstm/public_html/tm_assessment/calc.php on line 21
+[05-Mar-2016 16:43:03 America/Chicago] PHP Parse error:  syntax error, unexpected 'assessment' (T_STRING) in /home/asstm/public_html/tm_assessment/calc.php on line 25

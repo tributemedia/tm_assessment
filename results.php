@@ -16,7 +16,7 @@ include 'hs-submit.php';
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TM Assessment</title>
+    <title>Tribute Media - Digital Marketing Self Assessment</title>
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -30,7 +30,7 @@ include 'hs-submit.php';
             
         <div id="header">  
           <div class="title-wrapper">
-            <div class="main-title"><h1>Assessment</h1></div>
+            <div class="main-title"><h1>Your Results</h1></div>
           </div>
           
           <div class="pager-wrapper">
@@ -47,7 +47,7 @@ include 'hs-submit.php';
             <div class="section-title"><?php echo $results; ?></div>
             
             <div class="row">
-              <div class="col s12 m6">
+              <div class="col s12 m6 section-text">
                 <div class="inner">
                   <div><?php echo $results_body; ?></div>
                 </div>
@@ -57,8 +57,7 @@ include 'hs-submit.php';
                 <div class="inner">
                   
                   <p><?php echo $first_name . ", "; ?>thanks for taking our assessment. 
-                    We've just got a couple of more things to ask you before we finish up. 
-                    This information helps us help you.</p>
+                    There is more to this world than just an assessment. We can help you do more. Let us know below how we can help you.</p>
                   
                   <form name="results" action="complete.php" method="post">
                     <div class="form-field">
@@ -116,7 +115,7 @@ include 'hs-submit.php';
 											<label for="events">Please email me when you have events, trainings and workshops.</label>
 										</p>
                     <div class="button-wrapper">
- 		  			      	  <button class="waves-effect waves-light btn-large" type="submit">Submit</button>
+ 		  			      	  <button class="waves-effect waves-light btn-large" type="submit">Finalize Your Assessment</button>
                     </div>
                   </form>
                   

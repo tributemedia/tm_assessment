@@ -39,7 +39,7 @@ include 'hs-submit.php';
           
         <div id="header">  
           <div class="title-wrapper">
-            <div class="main-title"><h1>Assessment</h1></div>
+            <div class="main-title"><h1>Tribute Media - Digital Marketing Self Assessment</h1></div>
           </div>
           
           <div class="pager-wrapper">
@@ -53,7 +53,7 @@ include 'hs-submit.php';
 	 		  
         <div id="section-two" class="section">
            <div class="section-inner container">
-              <div class="section-title"><h2>We'd Like Your Opinion</h2></div>
+              <div class="section-title"><h2>Please answer these 15 questions</h2><p>Each question has a little icon (<i class="tiny material-icons">info</i>) next to it that will provide more detail. For example, multiple choices questions have the multiple options in the fancy little tool tip. Your biggest challenge is trying to put yourself in your clients' shoes. Do your best to think like an outsider.  Take your time and be brutally honest with yourself, your entire marketing world is riding on your answers.</p></div>
 	 		  			<form name="questions" action="results.php" method="post">
 	              <div class="form-field">
 									<input class="first-name" type="hidden" name="first_name" value=<?php echo '"'
@@ -78,7 +78,7 @@ include 'hs-submit.php';
 									
                   <?php
 									foreach ($questions as $key => $question) {
-										$html = '<div class="assessment-question">';
+										$html = '<div class="assessment-question ' . 'assessment-question-' . $key .'">';
 										$html .= '<input type="hidden" name="q' . $key 
 											. '-weight" value="' . $question['m'] . '>"';
 										$html .= '<label for="q' . $key . '">Question ' . $key . ':</label>';
@@ -88,11 +88,11 @@ include 'hs-submit.php';
 										$html .= '<span id="tip' . $key . '" class="hidden">' . $question['t'] . '</span></span></p>';
 										$html .= '<input type="range" name="q' . $key . '" id="q' . $key . '" value="1" min="1" max="5" />';
 										$html .= '<div class="numbers">';
-										$html .= '<span class="one"><img src="css/images/1.png" /></span>
-                      <span class="two"><img src="css/images/2.png" /></span>
-										<span class="three"><img src="css/images/3.png" /></span>
-											<span class="four"><img src="css/images/4.png" /></span>
-											<span class="five"><img src="css/images/5.png" /></span>';
+										$html .= '<span class="one"><span class="icon"></span></span>
+                      <span class="two"><span class="icon"></span></span>
+										<span class="three"><span class="icon"></span></span>
+											<span class="four"><span class="icon"></span></span>
+											<span class="five"><span class="icon"></span></span>';
 										$html .= '</div></div>';
 										
 										print $html;
@@ -102,7 +102,7 @@ include 'hs-submit.php';
 								</div>
               
               <div class="button-wrapper">
-	 		  			  <button class="waves-effect waves-light btn-large" type="submit">Next</button>
+	 		  			  <button class="waves-effect waves-light btn-large" type="submit">See Your Results</button>
               </div>
 	 		  		</form>
           </div>

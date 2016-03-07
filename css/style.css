@@ -1,6 +1,31 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons") screen,projection;
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css") screen,projection;
 
+
+/* ============== */
+/* = @Font Face = */
+/* ============== */
+
+@font-face {
+  font-family: 'GillSansMTRegular';
+  src: url('http://cdn2.hubspot.net/hub/481308/file-2428703780-eot/Fonts/gillsansmt.eot');
+  src: url('http://cdn2.hubspot.net/hub/481308/file-2428703780-eot/Fonts/gillsansmt.eot') format('embedded-opentype'),
+  url('http://cdn2.hubspot.net/hub/481308/file-2428713795-woff2/Fonts/gillsansmt.woff2') format('woff2'),
+  url('http://cdn2.hubspot.net/hub/481308/file-2424024893-woff/Fonts/gillsansmt.woff') format('woff'),
+  url('http://cdn2.hubspot.net/hub/481308/file-2426535301-ttf/Fonts/gillsansmt.ttf') format('truetype'),
+  url('http://cdn2.hubspot.net/hub/481308/file-2428713840-svg/Fonts/gillsansmt.svg') format('svg');
+}
+@font-face {
+  font-family: 'AbadiMTCondensedExtraBoldRegular';
+  src: url('http://cdn2.hubspot.net/hub/481308/file-2426535311-eot/Fonts/abadimtcondensedextraboldregular.eot');
+  src: url('http://cdn2.hubspot.net/hub/481308/file-2426535311-eot/Fonts/abadimtcondensedextraboldregular.eot') format('embedded-opentype'),
+  url('http://cdn2.hubspot.net/hub/481308/file-2428703775-woff2/Fonts/abadimtcondensedextraboldregular.woff2') format('woff2'),
+  url('http://cdn2.hubspot.net/hub/481308/file-2426535306-woff/Fonts/abadimtcondensedextraboldregular.woff') format('woff'),
+  url('http://cdn2.hubspot.net/hub/481308/file-2426535316-ttf/Fonts/abadimtcondensedextraboldregular.ttf') format('truetype'),
+  url('http://cdn2.hubspot.net/hub/481308/file-2428713790-svg/Fonts/abadimtcondensedextraboldregular.svg') format('svg');
+}
+
+
 /* =========== */
 /* = General = */
 /* =========== */
@@ -13,11 +38,13 @@ body {
   color: #444444;
   background: #ffffff;
   font-weight: 400;
+  font-family: 'GillSansMTRegular';
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: 50%;
+  font-family: 'AbadiMTCondensedExtraBoldRegular';text-transform:uppercase;
 }
 
 h1 {
@@ -69,100 +96,15 @@ body,
   margin: 0;
 }
 
+.assessment-image img {max-width:75%;}
+.section-text {font-size:1.25rem;}
 
-
-/*input[type='range'] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: none;
-    cursor: pointer;
-    display: block;
-    height: 100%;
-    overflow: hidden;
-    width: 45px;
-
-    &:focus {
-        box-shadow: none;
-        outline: none;
-    }
-
-    &::-webkit-slider-runnable-track {
-        -webkit-appearance: none;
-        background: #666;
-        height: 3px;
-    }
-
-    &::-webkit-slider-thumb:before {
-        position: absolute;
-        top: 0;
-        right: 50%;
-        left: -200px;
-        background: #e00;
-        content: '';
-        height: 3px;
-        pointer-events: none; //Update after comment of @Rich Smith
-    }
-
-
-    &::-webkit-slider-thumb {
-	    background:#168ABC;
-	    height:12px;
-	    width:12px;
-    }
-
-    &::-moz-range-track {
-        width: 45px;
-    }
-
-    &::-moz-range-thumb {
-        width: 3px;
-        height: 3px;
-				background:yellow;
-
-        -moz-appearance: none;
-        background: transparent;
-        border: 0;
-        border-radius: 0;
-        box-shadow: 0;
-        position: relative;
-    }
-
-    &::-moz-range-progress {
-        background: #e00;
-    }
-
-    &::-ms-track {
-        background: transparent;
-        border: 0;
-        border-color: transparent;
-        border-radius: 0;
-        border-width: 0;
-        color: transparent;
-        height: 3px;
-        width: 45px;
-    }
-
-    &::-ms-fill-lower {
-        background: #e00;
-        border-radius: 0;
-    }
-
-    &::-ms-fill-upper {
-        background: #666;
-        border-radius: 0;
-    }
-
-    &::-ms-thumb {
-        width: 0;
-        height: 0;
-        background: transparent;
-    }
-
-    &::-ms-tooltip {
-        display: none;
-    }
+#attribution-line {
+    font-size: .9rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
-*/
+
 /* ============== */
 /* = Main Title = */
 /* ============== */
@@ -224,7 +166,7 @@ body,
 
 .section .form-field input {
   color: #000000;
-  font-size: 1.8rem;
+  font-size: 1.1rem;
 }
 
 #section-one .button-wrapper {
@@ -429,8 +371,62 @@ input[type='range']:active::-moz-range-thumb {
   transition: all 0.2s ease-in-out;
 }
 
+.form-required {
+  color: #aa0000;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+span.label {
+  text-transform:uppercase;
+  font-family: 'AbadiMTCondensedExtraBoldRegular';
+  font-size:.8rem;
+  color:#666;
+}
+
+.numbers .one .icon,
+.numbers .two .icon,
+.numbers .three .icon,
+.numbers .four .icon,
+.numbers .five .icon {
+  width:25px;
+  height:25px;
+  overflow:hidden;
+  position:relative;
+  left:45%;
+}
+.numbers .one .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-1.png") no-repeat 0 0;left:-6px;}
+.numbers .two .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-2.png") no-repeat 0 0;}
+.numbers .three .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-3.png") no-repeat 0 0;}
+.numbers .four .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-4.png") no-repeat 0 0;}
+.numbers .five .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-5.png") no-repeat 0 0;left:87%;}
 
 
+/* change to A */
+.assessment-question-2 .numbers .one .icon,
+.assessment-question-4 .numbers .one .icon,
+.assessment-question-11 .numbers .one .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-a.png");}
+
+/* change to B */
+.assessment-question-2 .numbers .two .icon,
+.assessment-question-4 .numbers .two .icon,
+.assessment-question-11 .numbers .two .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-b.png");}
+
+/* change to C */
+.assessment-question-2 .numbers .three .icon,
+.assessment-question-4 .numbers .three .icon,
+.assessment-question-11 .numbers .three .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-c.png");}
+
+/* change to D */
+.assessment-question-2 .numbers .four .icon,
+.assessment-question-4 .numbers .four .icon,
+.assessment-question-11 .numbers .four .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-d.png");}
+
+/* change to E */
+.assessment-question-2 .numbers .five .icon,
+.assessment-question-4 .numbers .five .icon,
+.assessment-question-11 .numbers .five .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-e.png");}
+
+.section-title i {position:relative;top:4px;}
 /* =========================== */
 /* = Results / Section Three = */
 /* =========================== */
@@ -446,9 +442,28 @@ input[type='range']:active::-moz-range-thumb {
   left: 0;
 }
 
+
 #section-three .button-wrapper {
   margin-top: 40px;
 }
+
+.the-image {
+  height:225px;
+  width:325px;
+  margin:auto;
+  max-width:100%;
+}
+.image-start .the-image {background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/get-started.png") no-repeat 0 0;}
+.image-one .the-image,
+.image-two .the-image,
+.image-three .the-image,
+.image-four .the-image,
+.image-five .the-image {background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/fail.png") no-repeat 0 0;}
+.image-six .the-image, 
+.image-seven .the-image {background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/almost-bad.png") no-repeat 0 0;}
+.image-eight .the-image {background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/okay.png") no-repeat 0 0;}
+.image-nine .the-image {background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/fleek.png") no-repeat 0 0;}
+.image-ten .the-image {background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/king.png") no-repeat 0 0;}
 
 /* ========== */
 /* = Footer = */
@@ -639,82 +654,7 @@ a.contact:hover {
 .googleplus:before{content:"\f0d5";padding:5px 3px 3px;}
 .contact:before{content: "\f0e0";padding:5px 6px 3px;font-size:1.3rem;}
 
-/*big icons*/
-.big .home:before,
-.big .twitter:before,
-.big .linkedin:before,
-.big .youtube:before {
-  font-size:2.5rem;
-  width:55px;
-  height:55px;
-  padding:8px;
-}
 
-.big .facebook:before {
-  font-size:2.5rem;
-  width:55px;
-  height:55px;
-  padding:10px;
-}
-.big .instagram:before {
-  font-size:2.5rem;
-  width:55px;
-  height:55px;
-  padding:8px 10px;
-}
-.big .pinterest:before {
-  font-size:2.5rem;
-  width:55px;
-  height:55px;
-  padding:11px;
-}
-
-.big .contact:before {
-  font-size:2.5rem;
-  width:55px;
-  height:55px;
-  padding:7.5px;
-}
-
-/*circle icons*/
-.circle .home:before,
-.circle .twitter:before,
-.circle .facebook:before,
-.circle .linkedin:before,
-.circle .instagram:before,
-.circle .pinterest:before,
-.circle .youtube:before,
-.circle .contact:before {
-  border-width:1px;
-  border-style:solid;
-  border-radius:30px;
-  background-clip:padding-box;
-}
-
-.circle .youtube:before{padding:5px 4px 3px;}
-
-.light.home:before,
-.light.twitter:before,
-.light.facebook:before,
-.light.linkedin:before,
-.light.instagram:before,
-.light.pinterest:before,
-.light.youtube:before,
-.light.contact:before {
-  color:#fff;
-}
-
-.light.home:hover:before,
-.light.twitter:hover:before,
-.light.facebook:hover:before,
-.light.linkedin:hover:before,
-.light.instagram:hover:before,
-.light.pinterest:hover:before,
-.light.youtube:hover:before,
-.light.contact:hover:before {
-  color:#444;
-  background:#fff;
-}
 
 /* ================= */
 /* = Media Queries = */
@@ -728,7 +668,6 @@ a.contact:hover {
   }
   
   .row .col,
-  .section h2,
   .column .inner {
     padding: 0 20px;
   }

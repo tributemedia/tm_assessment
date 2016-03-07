@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TM Assessment</title>
+    <title>Tribute Media - Digital Marketing Self Assessment</title>
+    <meta content="" name="description">
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -15,7 +16,7 @@
         
         <div id="header">  
           <div class="title-wrapper">
-            <div class="main-title"><h1>Assessment</h1></div>
+            <div class="main-title"><h1>Assess Your Digital Marketing</h1></div>
           </div>
           
           <div class="pager-wrapper">
@@ -32,9 +33,11 @@
             <div class="section-title"><h2>Let's Get Started</h2></div>
             
             <div class="row">
-              <div class="col s12 m6">
+              <div class="col s12 m6 section-text">
                 <div class="inner">
-                  <p>Congratulations on taking the first step toward a better web presence. These questions are designed to help you take an honest look at 15 pieces of the web strategy puzzle. Once you discover how you're doing, you'll have the opportunity to get some (FREE!) help from our experts.</p>
+                  <p>Congratulations on taking the first step toward a better web presence. These questions are designed to help you take an honest look at 15 pieces of the web strategy puzzle.</p> 
+                  <div class='assessment-image-wrapper image-start center-align'><div class='the-image'></div></div>
+                  <p>Once you discover how you're doing, you'll have the opportunity to get some (FREE!) help from our experts.</p> <p>Get started by filling out the form here.</p>
                 </div>
               </div>
               
@@ -42,22 +45,22 @@
                 <div class="inner">
                   <form action="questions.php" method="post" name="info">
                     <div class="form-field">
-						      		<span class="label">First Name:</span><input type="text" name="first_name" required />
+						      		<span class="label">First Name:</span><span class="form-required" title="This field is required.">*</span><input type="text" name="first_name" required />
 						      	</div>
-                    <div class="form-field"><span class="label">Last Name:</span>
+                    <div class="form-field"><span class="label">Last Name:</span><span class="form-required" title="This field is required.">*</span>
 						      		<input type="text" name="last_name" required />
 						      	</div>
-						      	<div class="form-field"><span class="label">Email:</span>
+						      	<div class="form-field"><span class="label">Email:</span><span class="form-required" title="This field is required.">*</span>
 						      		<input type="email" name="email" required />
 						      	</div>
-                    <div class="form-field"><span class="label">Company:</span>
+                    <div class="form-field"><span class="label">Company:</span><span class="form-required" title="This field is required.">*</span>
 						      		<input type="text" name="company" required />
 						      	</div>
-                    <div class="form-field"><span class="label">Company URL:</span>
+                    <div class="form-field"><span class="label">Company URL:</span><span class="form-required" title="This field is required.">*</span>
 						      		<input type="text" name="company_url" required />
 						      	</div>
                     <div class="button-wrapper">
- 		  			      	  <button class="waves-effect waves-light btn-large" type="submit">Next</button>
+ 		  			      	  <button class="waves-effect waves-light btn-large" type="submit">Answer The 15 Questions</button>
                     </div>
                   </form>
                 </div>

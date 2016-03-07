@@ -12,7 +12,7 @@ $events = $_POST['events'] == 'on' ? 'Yes' : 'No';
 $call = $_POST['call'] == 'on' ? 'Yes' : 'No';
 
 include 'post-vars.php';
-header('Location: https://www.tributemedia.com/');
+header('Location: https://www.tributemedia.com/thank-you-self-assessment');
 include 'hs-submit.php';
 exit;
 
