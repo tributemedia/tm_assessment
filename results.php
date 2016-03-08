@@ -27,9 +27,18 @@ include 'hs-submit.php';
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 		<script>
-		  function validateForm(id) {
-        var element = document.getElementById(id);
-        console.log(element.value);
+		  function validateForm() {
+        var call = document.getElementById('call');
+        var tips = document.getElementById('tuesday-tips');
+        var events = document.getElementById('events');
+        var invalid = document.getElementById('invalid-entry');
+        if (!call.checked && !tips.checked && ! events.checked) {
+          call.classList.add('invalid');
+          tips.classList.add('invalid');
+          events.classList.add('invalid');
+          invalid.classList.add('show');
+          return false;
+        }
 		  }
 		</script>
   </head>
@@ -70,7 +79,7 @@ include 'hs-submit.php';
                     There is more to this world than just an assessment. 
                     We can help you do more. Let us know below how we can help you.</p>
                   
-                  <form name="results" action="complete.php" onsubmit="return validateForm('call')" method="post">
+                  <form name="results" action="complete.php" onsubmit="return validateForm()" method="post">
                     <div class="form-field">
 						  				<input class="first-name" type="hidden" name="first_name" 
 						  				value=<?php echo '"' . $first_name . '"'; ?>>
@@ -113,7 +122,7 @@ include 'hs-submit.php';
 						  			  </select>
 						  			  <label>What is your total annual marketing &amp; advertising budget?</label>
 						  			</div>
-                    
+                    <div id="invalid-entry" class="hidden">Check at least one box below.</div>
 										<p>
 											<input type="checkbox" id="call" class="contact" name="call" />
 											<label for="call">Yes I want to meet for a more in-depth personalized audit of my web marketing.</label>

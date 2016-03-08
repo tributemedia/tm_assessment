@@ -105,6 +105,10 @@ body,
     padding-top: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 /* ============== */
 /* = Main Title = */
 /* ============== */
@@ -481,6 +485,13 @@ span.label {
   left: 0;
 }
 
+#invalid-entry.show {
+  display: inline-block;
+  color: red;
+  border: red solid 2px;
+  background-color: pink;
+  padding: 10px;
+}
 
 #section-three .button-wrapper {
   margin-top: 40px;

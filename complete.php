@@ -15,6 +15,5 @@ include 'post-vars.php';
 header('Location: https://www.tributemedia.com/thank-you-self-assessment');
 include 'hs-submit.php';
 exit;
-echo "call value: " . $call;
 ?>
 
