@@ -29,7 +29,7 @@ $str_post = "firstname=" . urlencode($first_name)
 
 // replace the values in this URL with your portal ID and your form GUID
 // https://forms.hubspot.com/uploads/form/v2/[portal ID]/[form GUID]
-$endpoint = 'https://forms.hubspot.com/uploads/form/v2/481308/f9977177-eb96-4d01-9445-9cd67c966d11';
+$endpoint = 'https://forms.hubspot.com/uploads/form/v2/481308/0d441326-8841-4903-97a4-425f6875e6d6';
 
 $ch = @curl_init();
 @curl_setopt($ch, CURLOPT_POST, true);
@@ -42,5 +42,5 @@ $ch = @curl_init();
 $response    = @curl_exec($ch); //Log the response from HubSpot as needed.
 $status_code = @curl_getinfo($ch, CURLINFO_HTTP_CODE); //Log the response status code
 @curl_close($ch);
-echo $status_code . " " . $response;
+//echo $status_code . " " . $response;
 ?>

@@ -1,11 +1,15 @@
 <?php
 
-$step1 = 'yes';
+$step1 = $_POST['front'];
 $step2 = 'no';
 $finished = 'no';
 $page_name = 'Assessment-Information';
-$page_url = 'http://assessment.tributemedia.com/info.php';
+$page_url = 'http://assessment.tributemedia.com/tm_assessment/info.php';
 
+if ($step1 != 'yes') {
+  header('Location: ' . $page_url);
+  exit;
+}
 include 'post-vars.php';
 include 'questions-vars.php';
 include 'hs-submit.php';
@@ -24,16 +28,13 @@ include 'hs-submit.php';
 		<script>
 		  function show(id) {
         document.getElementById(id).className = "visible";
-		    //document.getElementById(id).style.display = "inline-flex";
-			 }
+		  }
 		  function hide(id) {
         document.getElementById(id).className = "hidden";
-		    //document.getElementById(id).style.display = "none";
-			}
+		  }
 		</script>
   </head>
   <body>
-    
     <div id="assessment-wrapper">
       <div class="assessment-inner">
           
@@ -55,6 +56,9 @@ include 'hs-submit.php';
            <div class="section-inner container">
               <div class="section-title"><h2>Please answer these 15 questions</h2><p>Each question has a little icon (<i class="tiny material-icons">info</i>) next to it that will provide more detail. For example, multiple choices questions have the multiple options in the fancy little tool tip. Your biggest challenge is trying to put yourself in your clients' shoes. Do your best to think like an outsider.  Take your time and be brutally honest with yourself, your entire marketing world is riding on your answers.</p></div>
 	 		  			<form name="questions" action="results.php" method="post">
+                <div class="form-field">
+                  <input type="hidden" name="second" value="yes" />
+                </div>
 	              <div class="form-field">
 									<input class="first-name" type="hidden" name="first_name" value=<?php echo '"'
 									 . $first_name . '"'; ?>>
@@ -136,6 +140,16 @@ include 'hs-submit.php';
     </div>
     
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>		
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Start of Async HubSpot Analytics Code -->
+    <script type="text/javascript">
+      (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/481308.js';
+        e.parentNode.insertBefore(n, e);
+      })(document,"script","hs-analytics",300000);
+    </script>
+    <!-- End of Async HubSpot Analytics Code -->		
   </body>
 </html>

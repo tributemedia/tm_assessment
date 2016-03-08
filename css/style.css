@@ -376,6 +376,7 @@ input[type='range']:active::-moz-range-thumb {
   font-size: 0.8rem;
   margin-left: 5px;
 }
+
 span.label {
   text-transform:uppercase;
   font-family: 'AbadiMTCondensedExtraBoldRegular';
@@ -388,45 +389,83 @@ span.label {
 .numbers .three .icon,
 .numbers .four .icon,
 .numbers .five .icon {
-  width:25px;
+  width:100%;
   height:25px;
   overflow:hidden;
   position:relative;
-  left:45%;
 }
-.numbers .one .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-1.png") no-repeat 0 0;left:-6px;}
-.numbers .two .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-2.png") no-repeat 0 0;}
-.numbers .three .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-3.png") no-repeat 0 0;}
-.numbers .four .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-4.png") no-repeat 0 0;}
-.numbers .five .icon{background:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-5.png") no-repeat 0 0;left:87%;}
+
+.numbers .one .icon{
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-1.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.numbers .two .icon{
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.numbers .three .icon{
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-3.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.numbers .four .icon{
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-4.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.numbers .five .icon{
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/face-5.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
 
 
 /* change to A */
 .assessment-question-2 .numbers .one .icon,
 .assessment-question-4 .numbers .one .icon,
-.assessment-question-11 .numbers .one .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-a.png");}
+.assessment-question-11 .numbers .one .icon {
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-a.png");
+}
 
 /* change to B */
 .assessment-question-2 .numbers .two .icon,
 .assessment-question-4 .numbers .two .icon,
-.assessment-question-11 .numbers .two .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-b.png");}
+.assessment-question-11 .numbers .two .icon {
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-b.png");
+}
 
 /* change to C */
 .assessment-question-2 .numbers .three .icon,
 .assessment-question-4 .numbers .three .icon,
-.assessment-question-11 .numbers .three .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-c.png");}
+.assessment-question-11 .numbers .three .icon {
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-c.png");
+}
 
 /* change to D */
 .assessment-question-2 .numbers .four .icon,
 .assessment-question-4 .numbers .four .icon,
-.assessment-question-11 .numbers .four .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-d.png");}
+.assessment-question-11 .numbers .four .icon {
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-d.png");
+}
 
 /* change to E */
 .assessment-question-2 .numbers .five .icon,
 .assessment-question-4 .numbers .five .icon,
-.assessment-question-11 .numbers .five .icon {background-image:url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-e.png");}
+.assessment-question-11 .numbers .five .icon {
+  background-image: url("http://cdn2.hubspot.net/hubfs/481308/2016-Page-Images/assessment/letter-e.png");
+}
 
-.section-title i {position:relative;top:4px;}
+.section-title i {
+  position: relative;
+  top: 4px;
+}
+
 /* =========================== */
 /* = Results / Section Three = */
 /* =========================== */

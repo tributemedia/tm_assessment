@@ -1,11 +1,15 @@
 <?php
 
 $step1 = 'yes';
-$step2 = 'yes';
+$step2 = $_POST['second'];
 $finished = 'no';
 $page_name = 'Assessment-Questions';
-$page_url = 'http://assessment.tributemedia.com/questions.php';
+$page_url = 'http://assessment.tributemedia.com/tm_assessment/questions.php';
 
+if ($step2 != 'yes') {
+  header('Location: ' . $page_url);
+  exit;
+}
 include 'post-vars.php';
 include 'results-vars.php';
 include 'calc.php';
@@ -22,6 +26,12 @@ include 'hs-submit.php';
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+		<script>
+		  function validateForm(id) {
+        var element = document.getElementById(id);
+        console.log(element.value);
+		  }
+		</script>
   </head>
   <body>
 
@@ -57,9 +67,10 @@ include 'hs-submit.php';
                 <div class="inner">
                   
                   <p><?php echo $first_name . ", "; ?>thanks for taking our assessment. 
-                    There is more to this world than just an assessment. We can help you do more. Let us know below how we can help you.</p>
+                    There is more to this world than just an assessment. 
+                    We can help you do more. Let us know below how we can help you.</p>
                   
-                  <form name="results" action="complete.php" method="post">
+                  <form name="results" action="complete.php" onsubmit="return validateForm('call')" method="post">
                     <div class="form-field">
 						  				<input class="first-name" type="hidden" name="first_name" 
 						  				value=<?php echo '"' . $first_name . '"'; ?>>
@@ -102,20 +113,21 @@ include 'hs-submit.php';
 						  			  </select>
 						  			  <label>What is your total annual marketing &amp; advertising budget?</label>
 						  			</div>
+                    
 										<p>
-											<input type="checkbox" id="call" name="call" />
+											<input type="checkbox" id="call" class="contact" name="call" />
 											<label for="call">Yes I want to meet for a more in-depth personalized audit of my web marketing.</label>
 										</p>
 										<p>
-											<input type="checkbox" id="tuesday-tips" name="tuesday-tips" />
+											<input type="checkbox" id="tuesday-tips" class="contact" name="tuesday-tips" />
 											<label for="tuesday-tips">Please add me to your weekly tips email.</label>
 										</p>
 										<p>
-											<input type="checkbox" id="events" name="events" />
+											<input type="checkbox" id="events" class="contact" name="events" />
 											<label for="events">Please email me when you have events, trainings and workshops.</label>
 										</p>
                     <div class="button-wrapper">
- 		  			      	  <button class="waves-effect waves-light btn-large" type="submit">Finalize Your Assessment</button>
+ 		  			      	  <button id="submit-button" class="waves-effect waves-light btn-large" type="submit">Finalize Your Assessment</button>
                     </div>
                   </form>
                   
@@ -160,5 +172,15 @@ include 'hs-submit.php';
 		  	$('select').material_select();
 		  });
 		</script>
+    <!-- Start of Async HubSpot Analytics Code -->
+      <script type="text/javascript">
+        (function(d,s,i,r) {
+          if (d.getElementById(i)){return;}
+          var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+          n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/481308.js';
+          e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+      </script>
+    <!-- End of Async HubSpot Analytics Code -->
   </body>
 </html> 
