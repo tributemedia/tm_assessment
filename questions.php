@@ -118,6 +118,7 @@ include 'hs-submit.php';
               <div class="inner row">
                 <div id="copyright-line" class="col s12 m6 center-on-mobile">
                   <div class="inner">
+                    <div class="back-to-home"><a href="http://www.tributemedia.com">BACK TO HOME</a></div>
                     &copy; <?php echo date("Y"); ?> Tribute Media || 208.489.0123 <br /> 136 E. Idaho Ave. Ste. 100, Meridian, ID 83642
                   </div>
                 </div>

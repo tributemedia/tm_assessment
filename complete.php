@@ -10,6 +10,7 @@ $budget = $_POST['budget'];
 $tuesday_tips = $_POST['tuesday-tips'] == 'on' ? 'Yes' : 'No';
 $events = $_POST['events'] == 'on' ? 'Yes' : 'No';
 $call = $_POST['call'] == 'on' ? 'Yes' : 'No';
+$phone =$_POST['phone'];
 
 include 'post-vars.php';
 header('Location: https://www.tributemedia.com/thank-you-self-assessment');

@@ -122,12 +122,18 @@ include 'hs-submit.php';
 						  			  </select>
 						  			  <label>What is your total annual marketing &amp; advertising budget?</label>
 						  			</div>
+                    <div id="phone-number">
+                      <p>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="contact" name="phone" />
+                      </p>
+                    </div>
                     <div id="invalid-entry" class="hidden">Check at least one box below.</div>
 										<p>
 											<input type="checkbox" id="call" class="contact" name="call" />
 											<label for="call">Yes I want to meet for a more in-depth personalized audit of my web marketing.</label>
 										</p>
-										<p>
+                    <p>
 											<input type="checkbox" id="tuesday-tips" class="contact" name="tuesday-tips" />
 											<label for="tuesday-tips">Please add me to your weekly tips email.</label>
 										</p>
@@ -153,6 +159,7 @@ include 'hs-submit.php';
               <div class="inner row">
                 <div id="copyright-line" class="col s12 m6 center-on-mobile">
                   <div class="inner">
+                    <div class="back-to-home"><a href="http://www.tributemedia.com">BACK TO HOME</a></div>
                     &copy; <?php echo date("Y"); ?> Tribute Media || 208.489.0123 <br /> 136 E. Idaho Ave. Ste. 100, Meridian, ID 83642
                   </div>
                 </div>

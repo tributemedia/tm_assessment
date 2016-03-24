@@ -30,11 +30,11 @@ $questions['3'] = array(
 $questions['4'] = array(
 	'm' => '1',
 	'q' => 'When was your website designed and built?',
-	't' => 'a) 5 or more years ago<br />
+	't' => "a) 5 or more years ago<br />
           b) 3-4 years ago<br />
           c) 2-3 years ago<br />
           d) 1-2 years ago<br />
-          e) It’s brand spankin’ new in the last 12 months',
+          e) It's brand spankin' new in the last 12 months",
 );
 $questions['5'] = array(
 	'm' => '2',
@@ -44,7 +44,7 @@ $questions['5'] = array(
 $questions['6'] = array(
 	'm' => '3',
 	'q' => 'How active are you on social media?',
-	't' => 'Score yourself high if you are actively engaged on 3 or more platforms. Score yourself low if you don’t do social media at all.',
+	't' => "Score yourself high if you are actively engaged on 3 or more platforms. Score yourself low if you don't do social media at all.",
 );
 $questions['7'] = array(
 	'm' => '1',

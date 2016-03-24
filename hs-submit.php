@@ -25,6 +25,7 @@ $str_post = "firstname=" . urlencode($first_name)
   . "&tuesday_tips_signup=" . urlencode($tuesday_tips)
   . "&request_event_notifications=" . urlencode($events)
   . "&request_call=" . urlencode($call)
+  . "&phone=" . urlencode($phone)
   . "&hs_context=" . urlencode($hs_context_json); //Leave this one be
 
 // replace the values in this URL with your portal ID and your form GUID
