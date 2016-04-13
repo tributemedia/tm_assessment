@@ -5,6 +5,7 @@ $step2 = 'no';
 $finished = 'no';
 $page_name = 'Assessment-Information';
 $page_url = 'http://assessment.tributemedia.com/tm_assessment/info.php';
+$percent = 'no score';
 
 if ($step1 != 'yes') {
   header('Location: ' . $page_url);
@@ -128,7 +129,7 @@ include 'hs-submit.php';
                      <li><a class="twitter" href="https://twitter.com/tributemedia" target="_blank"><span class="inner">Twitter</span></a></li>
                      <li><a class="facebook" href="https://www.facebook.com/tributemediaboise" target="_blank"><span class="inner">Facebook</span></a></li>
                      <li><a class="linkedin" href="https://www.linkedin.com/company/tribute-media" target="_blank"><span class="inner">LinkedIn</span></a></li>
-                     <li><a class="contact" href="/contact"><span class="inner"><span class="inner">Contact</span></span></a></li>
+                     <li><a class="contact" href="https://www.tributemedia.com/contact"><span class="inner"><span class="inner">Contact</span></span></a></li>
                    </ul>
                   </div>
                 </div>

@@ -48,19 +48,19 @@
                       <input type="hidden" name="front" value="yes" />
                     </div>
                     <div class="form-field">
-						      		<span class="label">First Name:</span><span class="form-required" title="This field is required.">*</span><input type="text" name="first_name" required />
+						      		<span class="label">First Name:</span><span class="form-required" title="This field is required.">*</span><input class="validate" type="text" name="first_name" required />
 						      	</div>
                     <div class="form-field"><span class="label">Last Name:</span><span class="form-required" title="This field is required.">*</span>
-						      		<input type="text" name="last_name" required />
+						      		<input class="validate" type="text" name="last_name" required />
 						      	</div>
 						      	<div class="form-field"><span class="label">Email:</span><span class="form-required" title="This field is required.">*</span>
-						      		<input type="email" name="email" required />
+						      		<input class="validate" type="email" name="email" required />
 						      	</div>
                     <div class="form-field"><span class="label">Company:</span><span class="form-required" title="This field is required.">*</span>
-						      		<input type="text" name="company" required />
+						      		<input class="validate" type="text" name="company" required />
 						      	</div>
                     <div class="form-field"><span class="label">Company URL:</span><span class="form-required" title="This field is required.">*</span>
-						      		<input type="text" name="company_url" required />
+						      		<input class="validate" type="text" name="company_url" required />
 						      	</div>
                     <div class="button-wrapper">
  		  			      	  <button class="waves-effect waves-light btn-large" type="submit">Answer The 15 Questions</button>
@@ -89,7 +89,7 @@
                      <li><a class="twitter" href="https://twitter.com/tributemedia" target="_blank"><span class="inner">Twitter</span></a></li>
                      <li><a class="facebook" href="https://www.facebook.com/tributemediaboise" target="_blank"><span class="inner">Facebook</span></a></li>
                      <li><a class="linkedin" href="https://www.linkedin.com/company/tribute-media" target="_blank"><span class="inner">LinkedIn</span></a></li>
-                     <li><a class="contact" href="/contact"><span class="inner"><span class="inner">Contact</span></span></a></li>
+                     <li><a class="contact" href="https://www.tributemedia.com/contact"><span class="inner"><span class="inner">Contact</span></span></a></li>
                    </ul>
                   </div>
                 </div>

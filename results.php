@@ -100,6 +100,10 @@ include 'hs-submit.php';
 						  				<input class="company" type="hidden" name="company_url" 
 						  				value=<?php echo '"' . $company_url . '"'; ?>>
 						  			</div>
+                    <div class="form-field">
+						  				<input class="score" type="hidden" name="score" 
+						  				value=<?php echo '"' . $percent . '"'; ?>>
+						  			</div>
 						  			<div class="input-field">
 						  			  <select name="persona">
 						  			    <option value="" disabled selected>Choose your option</option>
@@ -169,7 +173,7 @@ include 'hs-submit.php';
                      <li><a class="twitter" href="https://twitter.com/tributemedia" target="_blank"><span class="inner">Twitter</span></a></li>
                      <li><a class="facebook" href="https://www.facebook.com/tributemediaboise" target="_blank"><span class="inner">Facebook</span></a></li>
                      <li><a class="linkedin" href="https://www.linkedin.com/company/tribute-media" target="_blank"><span class="inner">LinkedIn</span></a></li>
-                     <li><a class="contact" href="/contact"><span class="inner"><span class="inner">Contact</span></span></a></li>
+                     <li><a class="contact" href="https://www.tributemedia.com/contact"><span class="inner"><span class="inner">Contact</span></span></a></li>
                    </ul>
                   </div>
                 </div>
