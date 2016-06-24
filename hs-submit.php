@@ -27,6 +27,7 @@ $str_post = "firstname=" . urlencode($first_name)
   . "&request_call=" . urlencode($call)
   . "&phone=" . urlencode($phone)
   . "&assessment_score=" . urlencode($percent)
+  . $answers
   . "&hs_context=" . urlencode($hs_context_json); //Leave this one be
 
 // replace the values in this URL with your portal ID and your form GUID

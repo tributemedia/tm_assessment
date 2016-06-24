@@ -5,9 +5,11 @@
 // ====================================
 
 $total = 0;
+$calc_score = array();
 
 foreach ($score as $key => $value) {
   $total += (int) $q_weight[$key] * (int) $value;
+  $calc_score[$key] = (int) $q_weight[$key] * (int) $value;
 }
 
 $percent = ($total * 100)/$possible;

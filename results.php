@@ -6,14 +6,19 @@ $finished = 'no';
 $page_name = 'Assessment-Questions';
 $page_url = 'http://assessment.tributemedia.com/tm_assessment/questions.php';
 
-if ($step2 != 'yes') {
-  header('Location: ' . $page_url);
-  exit;
-}
+// if ($step2 != 'yes') {
+//   header('Location: ' . $page_url);
+//   exit;
+// }
 include 'post-vars.php';
 include 'results-vars.php';
 include 'calc.php';
-include 'hs-submit.php';
+
+foreach ($calc_score as $key => $calc_value) {
+  $answers .= "&answer_" . $key . "=" . urlencode($calc_value);
+}
+
+//include 'hs-submit.php';
 
 ?>
 

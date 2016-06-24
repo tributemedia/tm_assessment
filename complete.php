@@ -14,8 +14,8 @@ $phone = $_POST['phone'];
 $percent = $_POST['score'];
 
 include 'post-vars.php';
-header('Location: https://www.tributemedia.com/thank-you-self-assessment');
-include 'hs-submit.php';
-exit;
+//header('Location: https://www.tributemedia.com/thank-you-self-assessment');
+//include 'hs-submit.php';
+//exit;
 ?>
 
